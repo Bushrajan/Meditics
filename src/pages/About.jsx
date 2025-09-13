@@ -5,10 +5,10 @@ import { Link } from "react-router-dom";
 import { BiSolidHeart } from "react-icons/bi";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper/modules";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
 const About = () => {
-
+  const [showVideo, setShowVideo] = useState(false);
   const prevRef = useRef(null);
   const nextRef = useRef(null);
   const swiperRef = useRef(null);
@@ -100,13 +100,10 @@ const About = () => {
                   <img src="https://meditics.temptics.com/assets/img/about-2-img-2.jpg" alt="Consult Top Doctors" className="w-full h-full rounded-xl object-cover" />
                 </div>
 
-
                 {/* <!-- Front Image --> */}
                 <div className=" w-full lg:h-[550px] md:h-[550px] rounded-circle bg-custom-blue border-circle2 relative" data-aos="fade-up" data-aos-duration="1500">
                   <img src="https://meditics.temptics.com/assets/img/about-2-img-1.jpg" alt="About" className="w-full h-full object-cover rounded-xl custom-radius sm:custom-radius-sm  border-r-5 border-[#DBE9A1]" />
                 </div>
-
-
               </div>
             </div>
 
@@ -226,55 +223,60 @@ const About = () => {
 
             <div className="relative">
               <div className="flex">
-                <img src="https://meditics.temptics.com/assets/img/why-choose-img-1.jpg" alt="Nurse  with patient"
-                  className="rounded-xl lg:w-[430px] z-5 w-full object-cover shadow-md  lg:border-none border-8 border-[#DBE9A1]" />
-
+                <img src="https://meditics.temptics.com/assets/img/why-choose-img-1.jpg" alt="Nurse  with patient" className="rounded-xl lg:w-[430px] z-5 w-full object-cover shadow-md  lg:border-none border-8 border-[#DBE9A1]" />
                 <span className="lg:absolute lg:block lg:-right-[20px] lg:top-[50px] lg:w-[300px]  lg:h-[490px] border-8 rounded-xl hidden border-[#DBE9A1]"></span>
-
-
-
-                <span className="lg:hidden md:hidden absolute sm:left-[250px] sm:top-[300px] top-[150px] left-[100px] z-5 p-5 bg-[#DBE9A1] rounded-full transition duration-300 group-hover:bg-[#1D3777]">
-                  <a href="https://www.youtube.com/watch?v=bO6NNfX_1ns"
-                    target="_blank">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="w-5 h-5 transition duration-300 text-black group-hover:text-white"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        fill="currentColor"
-                        stroke="currentColor"
-                        strokeWidth="0.2"
-                        d="M1 15.65L15.662 8L1 .35z"
-                      />
+ 
+                {!showVideo && (
+                  <button onClick={() => setShowVideo(true)} className="w-[60px] absolute lg:block md:block hidden lg:-right-[50px] lg:top-[430px] md:top-[280px]  md:-right-[25px] z-10 p-5 bg-[#DBE9A1] rounded-full transition duration-300 group-hover:bg-[#1D3777]">
+                    <svg className="w-5 h-5 transition duration-300 text-black group-hover:text-white" viewBox="0 0 16 16">
+                      <path fill="currentColor" stroke="currentColor" strokeWidth="0.2" d="M1 15.65L15.662 8L1 .35z" />
                     </svg>
-                  </a>
-                </span>
+                  </button>
+                )}
+
+                {/* Fullscreen Video */}
+                {showVideo && (
+                  <div className="fixed inset-0 bg-black bg-opacity-80 backdrop-blur-sm z-50 flex items-center justify-center">
+                    <button onClick={() => setShowVideo(false)} className="absolute top-4 right-4 text-white text-xl">✕</button>
+                    <iframe
+                      className="w-full max-w-4xl aspect-video rounded-xl shadow-lg"
+                      src="https://www.youtube.com/embed/Ev6yE55kYGw?autoplay=1"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    ></iframe>
+                  </div>
+                )}
               </div>
 
               <div>
                 <img src="https://meditics.temptics.com/assets/img/why-choose-img-2.jpg" alt="Doctor with patient"
                   className="rounded-xl w-[230px] lg:z-5  md:z-5 h-[220px] md:absolute lg:absolute lg:-right-[100px] md:-right-[100px] lg:top-[350px] md:top-[200px] hidden lg:block md:block  object-cover shadow-md" />
-
-                <div className="relative group z-10 lg:mt-0 md:mt-0 mt-15 lg:block md:block hidden">
-                  <span className="lg:absolute md:absolute lg:-right-[15px]  lg:bottom-[40px] md:bottom-[300px]  md:-right-[15px] lg:p-4 md:p-4  bg-[#DBE9A1] rounded-full transition duration-300 group-hover:bg-[#1D3777]">
-                    <a href="https://www.youtube.com/watch?v=bO6NNfX_1ns"
-                      target="_blank">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="w-5 h-5 transition duration-300 text-black group-hover:text-white"
-                        viewBox="0 0 16 16"
-                      >
-                        <path
-                          fill="currentColor"
-                          stroke="currentColor"
-                          strokeWidth="0.2"
-                          d="M1 15.65L15.662 8L1 .35z"
-                        />
+                <div>
+                  {/* Play Button */}
+                  {!showVideo && (
+                    <button onClick={() => setShowVideo(true)} className="lg:hidden md:hidden absolute sm:left-[250px] sm:top-[300px] top-[150px] left-[115px] p-5 bg-[#DBE9A1] hover:bg-blue-900 rounded-full z-10">
+                      <svg className="w-5 h-5 text-black hover:text-white " viewBox="0 0 16 16">
+                        <path fill="currentColor" stroke="currentColor" strokeWidth="0.2" d="M1 15.65L15.662 8L1 .35z" />
                       </svg>
-                    </a>
-                  </span>
+                    </button>
+                  )}
                 </div>
+
+                {/* Fullscreen Video */}
+                {showVideo && (
+                  <div className="fixed inset-0 bg-black bg-opacity-80 backdrop-blur-sm z-50 flex items-center justify-center">
+                    <button onClick={() => setShowVideo(false)} className="absolute top-4 right-4 text-white text-xl">✕</button>
+                    <iframe
+                      className="w-full max-w-4xl aspect-video rounded-xl shadow-lg"
+                      src="https://www.youtube.com/embed/Ev6yE55kYGw?autoplay=1"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    ></iframe>
+                  </div>
+                )}
+
+
+
               </div>
 
             </div>
