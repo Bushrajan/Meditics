@@ -95,31 +95,30 @@ const Header = () => {
 
 
           {/* CTA Buttons */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5, delay: 0.8 }}
-            viewport={{ once: true }}
-            className="flex items-center gap-4"
-          >
-            <button
-              onClick={() => setShowSearch(true)}
-              className="bg-[#F2F2F2] hover:bg-[#0C243A] text-[#5D6063] hover:text-white px-3 py-2 rounded transition-colors duration-300"
+             {/* Appointment Button */}
+            <motion.button
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: 0.8 }}
+              viewport={{ once: true }}
+              className="group hidden lg:flex items-center gap-2 text-sm bg-[#DBE9A1] hover:bg-[#041C33] hover:text-[#DBE9A1] px-5 py-3 rounded  transition-colors duration-300"
             >
-              <CiSearch style={{ fontSize: '22px' }} />
-            </button>
-
-            <button
-              onClick={() => setSidebarOpen(true)}
-              className="bg-[#F2F2F2] hover:bg-[#0C243A] text-[#5D6063] hover:text-white px-3 py-2 rounded transition-colors duration-300"
-            >
-              <HiOutlineMenuAlt1 size={22} />
-            </button>
-
-            <button className="hidden lg:block text-sm bg-[#DBE9A1] hover:bg-[#041C33] hover:text-[#DBE9A1] px-5 py-3 rounded font-semibold transition-colors duration-300">
               BOOK AN APPOINTMENT
-            </button>
-          </motion.div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="rotate fill-current stroke-current text-[#041C33] group-hover:text-[#DBE9A1] transition-colors duration-300"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="currentColor"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  d="M16 5c0 .742.733 1.85 1.475 2.78c.954 1.2 2.094 2.247 3.401 3.046C21.856 11.425 23.044 12 24 12m0 0c-.956 0-2.145.575-3.124 1.174c-1.307.8-2.447 1.847-3.401 3.045C16.733 17.15 16 18.26 16 19m8-7H0"
+                />
+              </svg>
+            </motion.button>
         </div>
       </div >
 

@@ -180,10 +180,10 @@ const Footer = () => {
         </div>
 
         {/* Legal Links */}
-        <div className="flex gap-4">
-          <a href="#!" className="hover:underline">Terms of Use</a>
-          <a href="#!" className="hover:underline">Privacy</a>
-          <a href="#!" className="hover:underline">Environmental Policy</a>
+        <div className="flex gap-4 ">
+          <a href="#!" className=" text-[12px] hover:underline">Terms of Use</a>
+          <a href="#!" className=" text-[12px] hover:underline">Privacy</a>
+          <a href="#!" className=" text-[12px] hover:underline">Environmental Policy</a>
         </div>
       </div>
     </footer>
@@ -207,7 +207,7 @@ export const Footer2 = () => {
 
   motion
   return (
-    <footer className="relative overflow-hidden bg-[linear-gradient(90deg,_rgba(10,33,59,1)_34%,_rgba(46,70,132,1)_63%)] text-[#B4BCC2] px-6 lg:py-15 py-10 md:px-16 ">
+    <footer className="relative overflow-hidden bg-[linear-gradient(90deg,_rgba(10,33,59,1)_34%,_rgba(46,70,132,1)_63%)] text-[#B4BCC2] sm:px-6 px-2 lg:py-15 py-10 md:px-16 ">
 
       <div className='relative'>
         <span className='absolute top-0 right-[0px] lg:block hidden lg:-top-[120px] lg:-right-[60px]'>
@@ -335,7 +335,7 @@ export const Footer2 = () => {
       </div>
 
       {/* Footer Bottom */}
-      <div className="text-white max-w-6xl mx-auto mt-10 pt-6 flex flex-col md:flex-row justify-between items-center text-sm"
+      <div className="text-white max-w-6xl mx-auto mt-10 pt-6 flex flex-col md:flex-row justify-between items-center  text-sm"
         style={{ borderTop: '1px dashed #4B5563' }} data-aos="fade-up"
         data-aos-delay="800"
       >
@@ -349,7 +349,7 @@ export const Footer2 = () => {
           transition={{ duration: 0.4, delay: 1 }}
           className=""
         >
-          <div className="flex justify-center gap-4 text-[#0C243A] text-xl">
+          <div className="flex justify-center gap-4 lg:mt-0 lg:mb-0 md:mt-0 md:mb-0 mt-5 mb-4 text-[#0C243A] text-xl">
             <a href="#" className="border border-gray-600 text-white bg-white/20 hover:bg-[#0D6DFD] hover:border-[#0D6DFD] py-2 px-2 rounded  transition-colors duration-300">
               <FaFacebookF size={"15px"} />
             </a>
@@ -367,9 +367,9 @@ export const Footer2 = () => {
 
         {/* Legal Links */}
         <div className="flex gap-4">
-          <a href="#!" className="hover:underline">Terms of Use</a>
-          <a href="#!" className="hover:underline">Privacy</a>
-          <a href="#!" className="hover:underline">Environmental Policy</a>
+          <a href="#!" className="text-[14px] hover:underline">Terms of Use</a>
+          <a href="#!" className="text-[14px] hover:underline">Privacy</a>
+          <a href="#!" className="text-[14px] hover:underline">Environmental Policy</a>
         </div>
       </div>
     </footer>

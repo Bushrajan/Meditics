@@ -1,7 +1,7 @@
 
 import { motion } from "framer-motion";
 import { Header2 } from '../components/Header';
-import Footer from '../components/Footer';
+import { Footer2 } from '../components/Footer';
 import { useState } from "react";
 import { FaEnvelope, FaPhoneAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
@@ -186,7 +186,7 @@ const Contact = () => {
         </form>
       </div>
 
-      <Footer />
+      <Footer2 />
     </div>
   );
 };

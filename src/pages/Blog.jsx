@@ -1,7 +1,7 @@
 
 import { motion } from "framer-motion";
 import { Header2 } from '../components/Header';
-import Footer from '../components/Footer';
+import { Footer2 } from '../components/Footer';
 import 'swiper/css';
 import 'swiper/css/autoplay';
 import { Link } from "react-router-dom";
@@ -379,7 +379,7 @@ const Blog = () => {
         </div>
       </div>
 
-      <Footer />
+      <Footer2 />
     </div>
   );
 };

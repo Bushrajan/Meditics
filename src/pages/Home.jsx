@@ -282,7 +282,6 @@ const Home = () => {
                   />
                 </div>
 
-
               </div>
             </div>
           </div>
@@ -298,6 +297,7 @@ const Home = () => {
           <span className='absolute top-[0] left-[0px]' data-aos="fade-right">
             <img src="https://meditics.temptics.com/assets/img/banner-vector-1.svg" alt="img" className='z-50 lg:w-[150px]' />
           </span>
+
           <h2 className="text-xl font-semibold pt-8 mb-4">Time For Meet</h2>
           <ul className="space-y-2  ">
             <li className='py-2 mt-2 overflow-hidden '>
@@ -314,7 +314,7 @@ const Home = () => {
 
         {/* Right Section */}
         <section className=" relative lg:px-8 py-2 w-full md:w-2/3 " >
-          <span className='absolute top-[60px] right-0 lg:right-[0px] md:right-0' data-aos="fade-right">
+          <span className='absolute top-[60px] right-0 lg:-right-[150px] md:right-0' data-aos="fade-right">
             <img src="https://meditics.temptics.com/assets/img/about-vector.svg" alt="img" className='lg:h-[400px] md:h-[250px]' />
           </span>
 
@@ -761,7 +761,7 @@ const Home = () => {
 
         <section className="max-w-7xl mx-auto py-10 px-4 md:px-8 lg:px-16">
           {/* Header + Buttons */}
-          <div className="flex lg:justify-between gap-5 md:flex-wrap justify-center items-center">
+          <div className="flex lg:justify-between gap-5 md:flex-wrap flex-col justify-center items-center">
             <div className="lg:text-left text-center relative">
               <button className="text-[#0D6DFD] lg:mx-0 mx-auto border border-[#0D6DFD] flex items-center gap-2 px-4 py-1 rounded-full font-semibold transition-colors duration-300">
                 <BiSolidHeart color="#0D6DFD" /> Client's Testimonials
@@ -772,7 +772,7 @@ const Home = () => {
             </div>
 
             {/* Custom Navigation Buttons */}
-            <div className="flex gap-4">
+            <div className="flex  gap-4">
               <motion.button
                 onClick={() => swiperRef.current?.slidePrev()}
                 className="group flex items-center gap-3 text-sm border-black border hover:bg-[#DBE9A1] text-white hover:text-[#041C33] p-3 rounded-full font-semibold transition-colors duration-300"
@@ -864,7 +864,7 @@ const Home = () => {
 
       {/* YOUR HEALTH, YOUR CONVENIENCE */}
       <section className="bg-[#041C33] text-white px-4 md:px-8 py-13 lg:px-16">
-        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-10">
+        <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-10">
 
           {/* <!-- Left Content --> */}
           <div className="lg:w-1/2  lg:text-left md:text-center text-center space-y-6" >
@@ -882,22 +882,22 @@ const Home = () => {
 
               <li className='flex  lg:justify-start md:items-center  md:justify-center justify-start items-start  md:p-1'>
                 <span className='bg-[#0D6DFD] rounded-full p-1'>
-                  <img src="/rightarrow.png" className='w-4 h-4' alt="angle" />
+                  <img src="/rightarrow.png" className='w-2 h-3' alt="angle" />
                 </span>&nbsp;Speak with certified specialists in real time</li>
 
               <li className='flex  lg:justify-start md:items-center  md:justify-center justify-start items-start  md:p-1'>
                 <span className='bg-[#0D6DFD] rounded-full p-1'>
-                  <img src="/rightarrow.png" className='w-4 h-4' alt="angle" />
+                  <img src="/rightarrow.png" className='w-2 h-3' alt="angle" />
                 </span>&nbsp;Easy appointment booking via mobile or web</li>
 
               <li className='flex  lg:justify-start md:items-center  md:justify-center justify-start items-start  md:p-1'>
                 <span className='bg-[#0D6DFD] rounded-full p-1'>
-                  <img src="/rightarrow.png" className='w-4 h-4' alt="angle" />
+                  <img src="/rightarrow.png" className='w-2 h-3' alt="angle" />
                 </span>&nbsp;Private, secure, and confidential video calls</li>
 
               <li className='flex   lg:justify-start md:items-center  md:justify-center justify-start items-start  md:p-1'>
                 <span className='bg-[#0D6DFD] rounded-full p-1'>
-                  <img src="/rightarrow.png" className='w-4 h-4' alt="angle" />
+                  <img src="/rightarrow.png" className='w-2 h-3' alt="angle" />
                 </span>&nbsp;Available 7 days a week, including evenings</li>
             </ul>
 
@@ -929,27 +929,28 @@ const Home = () => {
           </div>
 
           {/* <!-- Right Content: Overlapping Mobile Screens --> */}
-          <div className="lg:w-1/2 relative flex  md:px-5 px-1 justify-center items-center mt-10 lg:mt-0" >
+          <div className="lg:w-1/2 relative flex  md:px-5 px-1 justify-center items-center mt-10 lg:mt-0 over" >
 
-            <div className='absolute hidden lg:block  lg:-bottom-[290px]  '>
 
+            <div className='lg:absolute lg:-bottom-[285px] lg:block hidden'>
               {/* <!-- Front Image --> */}
-              <div className="w-full h-[500px]  shadow-xl  z-10 relative" data-aos="fade-up" data-aos-duration="1500">
+              <div className="w-full lg:h-[500px]  shadow-xl  z-10 relative" data-aos="fade-up" data-aos-duration="1500">
                 <img src="https://meditics.temptics.com/assets/img/video-call-1.png" alt="Dr. Tiffany Rizka" className="w-full h-full object-cover" />
               </div>
 
               {/* <!-- Back Image --> */}
-              <div className="w-full h-[450px] lg:-right-[180px] lg:top-[50px] right-0 shadow-lg   absolute " data-aos="fade-up" data-aos-duration="1800">
+              <div className="w-full lg:h-[450px] lg:-right-[180px] lg:top-[50px] right-0 shadow-lg   lg:absolute " data-aos="fade-up" data-aos-duration="1800">
                 <img src="https://meditics.temptics.com/assets/img/video-call-2.png" alt="Consult Top Doctors" className="w-full h-full object-cover" />
               </div>
-
             </div>
+
+            <div className="lg:hidden md:block   w-full h-full">
+              <img src="/side.png" alt="Consult Top Doctors" className="w-full h-full object-cover" />
+            </div>
+
           </div>
 
 
-          <div className="lg:hidden md:block   w-full h-full">
-            <img src="/side.png" alt="Consult Top Doctors" className="w-full h-full object-cover" />
-          </div>
         </div>
       </section>
 
@@ -1032,12 +1033,13 @@ const Home = () => {
 
 
       {/* Apply for Appointment */}
-      <section className="relative mx-auto bg-[#F2F2F2] px-4 md:px-8  py-15">
+      <section className=" relative mx-auto bg-[#F2F2F2] px-4 md:px-8  py-15">
         <span className='absolute top-0 left-0'>
           <img
             src="https://meditics.temptics.com/assets/img/banner-vector-1.svg"
             alt="Background"
             className="w-[180px] object-cover"
+            data-aos="fade-right"
           />
         </span>
 
@@ -1064,7 +1066,7 @@ const Home = () => {
           </div>
 
           {/* Right Side: Form */}
-          <form className="  md:p-6 space-y-5" data-aos="fade-up" data-aos-duration="1500">
+          <form className="  md:p-6 space-y-5 z-10" data-aos="fade-up" data-aos-duration="1500">
 
             <div className='flex lg:flex-row flex-col gap-5'>
               <input
@@ -1144,6 +1146,7 @@ const Home = () => {
             src="https://meditics.temptics.com/assets/img/blog-vector-2.svg"
             alt="Background"
             className="w-auto h-[400px] object-cover"
+            data-aos="fade-right"
           />
         </span>
       </section >
