@@ -225,13 +225,25 @@ const About = () => {
               <div className="flex">
                 <img src="https://meditics.temptics.com/assets/img/why-choose-img-1.jpg" alt="Nurse  with patient" className="rounded-xl lg:w-[430px] z-5 w-full object-cover shadow-md  lg:border-none border-8 border-[#DBE9A1]" />
                 <span className="lg:absolute lg:block lg:-right-[20px] lg:top-[50px] lg:w-[300px]  lg:h-[490px] border-8 rounded-xl hidden border-[#DBE9A1]"></span>
- 
+
                 {!showVideo && (
-                  <button onClick={() => setShowVideo(true)} className="w-[60px] absolute lg:block md:block hidden lg:-right-[50px] lg:top-[430px] md:top-[280px]  md:-right-[25px] z-10 p-5 bg-[#DBE9A1] rounded-full transition duration-300 group-hover:bg-[#1D3777]">
-                    <svg className="w-5 h-5 transition duration-300 text-black group-hover:text-white" viewBox="0 0 16 16">
-                      <path fill="currentColor" stroke="currentColor" strokeWidth="0.2" d="M1 15.65L15.662 8L1 .35z" />
+                  <button
+                    onClick={() => setShowVideo(true)}
+                    className="group w-[60px] absolute lg:block md:block hidden lg:-right-[50px] lg:top-[430px] md:top-[280px] md:-right-[25px] z-10 p-5 bg-[#DBE9A1] rounded-full transition duration-300 hover:bg-[#1D3777]"
+                  >
+                    <svg
+                      className="w-5 h-5 transition duration-300 text-black group-hover:text-white"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        fill="currentColor"
+                        stroke="currentColor"
+                        strokeWidth="0.2"
+                        d="M1 15.65L15.662 8L1 .35z"
+                      />
                     </svg>
                   </button>
+
                 )}
 
                 {/* Fullscreen Video */}
@@ -254,9 +266,20 @@ const About = () => {
                 <div>
                   {/* Play Button */}
                   {!showVideo && (
-                    <button onClick={() => setShowVideo(true)} className="lg:hidden md:hidden absolute sm:left-[250px] sm:top-[300px] top-[150px] left-[115px] p-5 bg-[#DBE9A1] hover:bg-blue-900 rounded-full z-10">
-                      <svg className="w-5 h-5 text-black hover:text-white " viewBox="0 0 16 16">
-                        <path fill="currentColor" stroke="currentColor" strokeWidth="0.2" d="M1 15.65L15.662 8L1 .35z" />
+                    <button
+                      onClick={() => setShowVideo(true)}
+                      className="group lg:hidden md:hidden absolute sm:left-[250px] sm:top-[300px] top-[150px] left-[115px] p-5 bg-[#DBE9A1] hover:bg-blue-900 rounded-full z-10"
+                    >
+                      <svg
+                        className="w-5 h-5 text-black transition duration-300 group-hover:text-white"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          fill="currentColor"
+                          stroke="currentColor"
+                          strokeWidth="0.2"
+                          d="M1 15.65L15.662 8L1 .35z"
+                        />
                       </svg>
                     </button>
                   )}
