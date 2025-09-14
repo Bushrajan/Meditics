@@ -5,7 +5,7 @@ import { Footer2 } from '../components/Footer';
 import 'swiper/css';
 import 'swiper/css/autoplay';
 import { Link } from "react-router-dom";
-import { CiSearch } from "react-icons/ci"; 
+import { CiSearch } from "react-icons/ci";
 import { useState } from "react";
 import { FaRegClock } from "react-icons/fa";
 
@@ -157,208 +157,57 @@ const Blog = () => {
         </div>
       </div>
 
-      <div className="max-w-6xl flex flex-wrap justify-center items-center gap-8 lg:mb-15 md:mb-10  mb-5 lg:mt-16 md:m-10 mt-5 bg-white mx-auto lg:p-3">
-        <div className="max-w-7xl mx-auto lg:px-4 md:py-10 grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <div className="max-w-7xl mx-auto grid lg:grid-cols-3 gap-8 lg:mt-16 md:mt-10 mt-5 lg:mb-15 md:mb-10 mb-5 bg-white lg:p-3">
 
-          {/* Blog Posts*/}
-          <div className="lg:col-span-2 space-y-8 px-2" data-aos="fade-up" data-aos-duration="1050">
-            {paginatedPosts.map((post, i) => (
-              <div key={i} className="bg-white rounded-lg lg:border-0 md:border-0 sm:border-0 border-1 border-[#0D6DFD] hover:shadow-md overflow-hidden">
-                <img src={post.img} alt={post.title} className="w-full object-cover" />
-                <div className="lg:p-6 p-2 space-y-2">
-                  {/* Meta Info */}
-                  <div className="lg:text-sm md:text-sm sm:text-sm text-[9px] text-gray-500 flex items-center mb-5 gap-3">
-                    <span className="flex gap-1 items-center text-white p-1 px-4 bg-[#0D6DFD] rounded-full">
-                      {/* Author Icon */}
-                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">
-                        <path fill="white" d="M17.25 2.75H6.75A4.75 4.75 0 0 0 2 7.5v9a4.75 4.75 0 0 0 4.75 4.75h10.5A4.76 4.76 0 0 0 22 16.5v-9a4.76 4.76 0 0 0-4.75-4.75m-3.65 8.32a3.26 3.26 0 0 1-3.23 0L3.52 7.14a3.25 3.25 0 0 1 3.23-2.89h10.5a3.26 3.26 0 0 1 3.23 2.89z" stroke-width="0.2" stroke="#040000" />
-                      </svg>
-                      By {post.author}
-                    </span>
-                    <span className="flex gap-1 items-center">
-                      <FaRegClock color="#B6B7B9" className="w-[19px] h-[19px]" />
-                      {post.readTime}
-                    </span>
-                    <span className="flex gap-1 items-center">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24">
-                        <path fill="#B6B7B9" d="M17.25 2.75H6.75A4.75 4.75 0 0 0 2 7.5v9a4.75 4.75 0 0 0 4.75 4.75h10.5A4.76 4.76 0 0 0 22 16.5v-9a4.76 4.76 0 0 0-4.75-4.75m-3.65 8.32a3.26 3.26 0 0 1-3.23 0L3.52 7.14a3.25 3.25 0 0 1 3.23-2.89h10.5a3.26 3.26 0 0 1 3.23 2.89z" stroke-width="0.2" stroke="#040000" />
-                      </svg>
-                      {post.comments} Comments
-                    </span>
-                  </div>
-
-                  {/* Title + Excerpt */}
-                  <h2 className="lg:text-3xl md:text-2xl sm:text-xl font-bold text-[#041C33] hover:text-[#0D6DFD] transition">
-                    {post.title}
-                  </h2>
-                  <p className="text-gray-500 mt-2 mb-4 lg:text-sm md:text-sm sm:text-sm text-[13px]" >
-                    {post.text}
-                  </p>
-
-                  {/* Read More Button */}
-
-                  <motion.button
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    transition={{ duration: 0.5, delay: 0.1 }}
-                    className="group lg:w-[150px] md:w-[150px] sm:w-[150px] w-full flex items-center gap-3 text-sm text-[#0D6DFD] border border-[#0D6DFD] hover:bg-[#0D6DFD] hover:text-[white] px-5 py-3 rounded font-semibold transition-colors duration-300"
-                  >
-
-                    <Link to={`/detailblog/${i}`} className="flex  lg:w-25 md:w-50 w-full  btn justify-center items-center gap-2  ">
-                      <small>READ MORE</small>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="rotate fill-current stroke-current text-[#0D6DFD] group-hover:text-[white]"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          fill="currentColor"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          d="M16 5c0 .742.733 1.85 1.475 2.78c.954 1.2 2.094 2.247 3.401 3.046C21.856 11.425 23.044 12 24 12m0 0c-.956 0-2.145.575-3.124 1.174c-1.307.8-2.447 1.847-3.401 3.045C16.733 17.15 16 18.26 16 19m8-7H0"
-                        />
-                      </svg>
-                    </Link>
-
-                  </motion.button>
-
+        {/* Blog Posts*/}
+        <div className="lg:col-span-2 space-y-8 px-2" data-aos="fade-up" data-aos-duration="1050">
+          {paginatedPosts.map((post, i) => (
+            <div key={i} className="bg-white rounded-lg lg:border-0 md:border-0 sm:border-0 border-1 border-[#0D6DFD] hover:shadow-md overflow-hidden">
+              <img src={post.img} alt={post.title} className="w-full object-cover" />
+              <div className="lg:p-6 p-2 space-y-2">
+                {/* Meta Info */}
+                <div className="lg:text-sm md:text-sm sm:text-sm text-[9px] text-gray-500 flex items-center mb-5 gap-3">
+                  <span className="flex gap-1 items-center text-white p-1 px-4 bg-[#0D6DFD] rounded-full">
+                    {/* Author Icon */}
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">
+                      <path fill="white" d="M17.25 2.75H6.75A4.75 4.75 0 0 0 2 7.5v9a4.75 4.75 0 0 0 4.75 4.75h10.5A4.76 4.76 0 0 0 22 16.5v-9a4.76 4.76 0 0 0-4.75-4.75m-3.65 8.32a3.26 3.26 0 0 1-3.23 0L3.52 7.14a3.25 3.25 0 0 1 3.23-2.89h10.5a3.26 3.26 0 0 1 3.23 2.89z" stroke-width="0.2" stroke="#040000" />
+                    </svg>
+                    By {post.author}
+                  </span>
+                  <span className="flex gap-1 items-center">
+                    <FaRegClock color="#B6B7B9" className="w-[19px] h-[19px]" />
+                    {post.readTime}
+                  </span>
+                  <span className="flex gap-1 items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24">
+                      <path fill="#B6B7B9" d="M17.25 2.75H6.75A4.75 4.75 0 0 0 2 7.5v9a4.75 4.75 0 0 0 4.75 4.75h10.5A4.76 4.76 0 0 0 22 16.5v-9a4.76 4.76 0 0 0-4.75-4.75m-3.65 8.32a3.26 3.26 0 0 1-3.23 0L3.52 7.14a3.25 3.25 0 0 1 3.23-2.89h10.5a3.26 3.26 0 0 1 3.23 2.89z" stroke-width="0.2" stroke="#040000" />
+                    </svg>
+                    {post.comments} Comments
+                  </span>
                 </div>
-              </div>
-            ))}
 
-            <div className="flex justify-center items-center gap-2 mt-8">
-              <button className="p-3 border border-gray-400 bg-white rounded-full transition"
-                onClick={() => setCurrentPage((p) => Math.max(p - 1, 1))}
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="rotate2 fill-current stroke-current hover:text-[#0D6DFD] text-[#041C33] bg-white  group-hover:text-[white]"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
+                {/* Title + Excerpt */}
+                <h2 className="lg:text-3xl md:text-2xl sm:text-xl font-bold text-[#041C33] hover:text-[#0D6DFD] transition">
+                  {post.title}
+                </h2>
+                <p className="text-gray-500 mt-2 mb-4 lg:text-sm md:text-sm sm:text-sm text-[13px]" >
+                  {post.text}
+                </p>
+
+                {/* Read More Button */}
+
+                <motion.button
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ duration: 0.5, delay: 0.1 }}
+                  className="group lg:w-[150px] md:w-[150px] sm:w-[150px] w-full flex items-center gap-3 text-sm text-[#0D6DFD] border border-[#0D6DFD] hover:bg-[#0D6DFD] hover:text-[white] px-5 py-3 rounded font-semibold transition-colors duration-300"
                 >
-                  <path
-                    fill="currentColor"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    d="M16 5c0 .742.733 1.85 1.475 2.78c.954 1.2 2.094 2.247 3.401 3.046C21.856 11.425 23.044 12 24 12m0 0c-.956 0-2.145.575-3.124 1.174c-1.307.8-2.447 1.847-3.401 3.045C16.733 17.15 16 18.26 16 19m8-7H0"
-                  />
-                </svg>
-              </button>
 
-              {[...Array(totalPages)].map((_, i) => (
-                <button className={`px-4 py-2 rounded  ${currentPage === i + 1
-                  ? "bg-[#0D6DFD] text-white  border border-gray-400 rounded-full"
-                  : " border border-gray-400 bg-white rounded-full text-[#041C33] hover:bg-[#0D6DFD] hover:text-white"
-                  } transition`}
-                  key={i}
-                  onClick={() => setCurrentPage(i + 1)}
-                >
-                  {i + 1}
-                </button>
-              ))}
-
-              <button className="p-3 border border-gray-400 bg-white rounded-full transition"
-                onClick={() => setCurrentPage((p) => Math.min(p + 1, totalPages))}
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="rotate fill-current stroke-current  hover:text-[#0D6DFD] text-[#041C33] bg-white group-hover:text-[white]"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    fill="currentColor"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    d="M16 5c0 .742.733 1.85 1.475 2.78c.954 1.2 2.094 2.247 3.401 3.046C21.856 11.425 23.044 12 24 12m0 0c-.956 0-2.145.575-3.124 1.174c-1.307.8-2.447 1.847-3.401 3.045C16.733 17.15 16 18.26 16 19m8-7H0"
-                  />
-                </svg>
-              </button>
-            </div>
-          </div>
-
-          {/* Sidebar */}
-          <div className="space-y-8 p-2">
-            {/* Search */}
-            <div className="bg-[#F2F2F2] rounded-lg  p-4" data-aos="fade-up" data-aos-duration="1">
-              <div className="flex bg-white  lg:justify-between lg:items-start rounded-full p-2  hover:shadow-md">
-                <input
-                  type="text"
-                  placeholder="Search Here"
-                  className="w-full px-1 py-1   rounded-full focus:outline-none focus:ring-0 focus:ring-[#0d6dfd00]"
-                />
-                <button
-                  className="hover:bg-[#182E43] bg-[#0D6DFD] rounded-full text-white px-1 py-1 transition-colors duration-300"
-                >
-                  <CiSearch size={22} />
-                </button>
-              </div>
-            </div>
-
-            {/* Categories */}
-            <div className="bg-[#F2F2F2]  p-4 rounded-lg hover:shadow-md" data-aos="fade-up" data-aos-duration="1500">
-              <h2 className="text-xl font-semibold mb-4 text-[#041C33]" >Categories</h2>
-              <ul className="space-y-2 text-sm text-gray-700">
-                {categories.map((cat, i) => (
-                  <li key={i} className="hover:text-[#0D6DFD] cursor-pointer flex justify-between">
-                    <span className="heading">{cat.title}</span>
-                    <span className="heading">{cat.cat}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Recent Posts */}
-            <div className="bg-[#F2F2F2] p-4 rounded-lg hover:shadow-md" data-aos="fade-up" data-aos-duration="1000">
-              <h3 className="text-lg font-semibold mb-4 text-[#041C33]">Recent Posts</h3>
-              <ul className="space-y-2 text-sm text-gray-700">
-                {recentPosts.map((post, i) => (
-                  <li key={i}>
-                    <img src={post.img} alt="img" className="mb-4 rounded  w-full" />
-                    <span className="text-xs text-gray-500">{post.date}</span>
-                    <p className="font-medium heading mb-4 hover:text-[#0D6DFD] cursor-pointer">{post.title}</p>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Left: Schedule Section */}
-            <section className="bg-[#112B58] relative  text-white lg:text-left md:text-left px-4 text-center rounded-xl shadow-md w-full md:w-[350px]" data-aos="fade-up" data-aos-duration="1500" >
-
-              {/* Background Image */}
-              <div className="absolute inset-0 z-0 opacity-10">
-                <img
-                  src="https://meditics.temptics.com/assets/img/service-sidebar-cta-bg.jpg"
-                  alt="Background"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <h2 className="text-xl font-semibold pt-8 mb-4">Have Additional Questions?</h2>
-              <ul className="space-y-2  ">
-                <li className='py-2 mt-2 text-sm overflow-hidden '>
-                  <hr className='w-75 mx-auto border border-l-0 border-r-0 border-b-0 pt-3 border-t-gray-600' />
-                  3rd Avenue, 83 Manhattan, London, UK
-                </li>
-                <li className='hover:text-[#0D6DFD] text-white'>+1890 123 456</li>
-                <li className='hover:text-[#0D6DFD] text-sm'>support@example.com</li>
-                <li className='  pt-4 pb-8 text-sm'>
-
-                  {/* Appointment Button */}
-                  <motion.button
-                    initial={{ opacity: 0, scale: 0.95 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.5, delay: 0.8 }}
-                    viewport={{ once: true }}
-                    className="group hidden lg:flex z-10 items-center gap-2 text-[#041C33] text-sm bg-[#DBE9A1] hover:bg-[#041C33] hover:text-[#DBE9A1] px-5 py-3 rounded transition-colors duration-300"
-                  >
-                    Contact Us
+                  <Link to={`/detailblog/${i}`} className="flex  lg:w-25 md:w-50 w-full  btn justify-center items-center gap-2  ">
+                    <small>READ MORE</small>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      className="rotate fill-current stroke-current text-[#041C33] group-hover:text-[#DBE9A1] transition-colors duration-300"
+                      className="rotate fill-current stroke-current text-[#0D6DFD] group-hover:text-[white]"
                       width="24"
                       height="24"
                       viewBox="0 0 24 24"
@@ -370,13 +219,165 @@ const Blog = () => {
                         d="M16 5c0 .742.733 1.85 1.475 2.78c.954 1.2 2.094 2.247 3.401 3.046C21.856 11.425 23.044 12 24 12m0 0c-.956 0-2.145.575-3.124 1.174c-1.307.8-2.447 1.847-3.401 3.045C16.733 17.15 16 18.26 16 19m8-7H0"
                       />
                     </svg>
-                  </motion.button>
-                </li>
+                  </Link>
 
-              </ul>
-            </section>
+                </motion.button>
+
+              </div>
+            </div>
+          ))}
+
+          <div className="flex justify-center items-center gap-2 mt-8">
+            <button className="p-3 border border-gray-400 bg-white rounded-full transition"
+              onClick={() => setCurrentPage((p) => Math.max(p - 1, 1))}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="rotate2 fill-current stroke-current hover:text-[#0D6DFD] text-[#041C33] bg-white  group-hover:text-[white]"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="currentColor"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  d="M16 5c0 .742.733 1.85 1.475 2.78c.954 1.2 2.094 2.247 3.401 3.046C21.856 11.425 23.044 12 24 12m0 0c-.956 0-2.145.575-3.124 1.174c-1.307.8-2.447 1.847-3.401 3.045C16.733 17.15 16 18.26 16 19m8-7H0"
+                />
+              </svg>
+            </button>
+
+            {[...Array(totalPages)].map((_, i) => (
+              <button className={`px-4 py-2 rounded  ${currentPage === i + 1
+                ? "bg-[#0D6DFD] text-white  border border-gray-400 rounded-full"
+                : " border border-gray-400 bg-white rounded-full text-[#041C33] hover:bg-[#0D6DFD] hover:text-white"
+                } transition`}
+                key={i}
+                onClick={() => setCurrentPage(i + 1)}
+              >
+                {i + 1}
+              </button>
+            ))}
+
+            <button className="p-3 border border-gray-400 bg-white rounded-full transition"
+              onClick={() => setCurrentPage((p) => Math.min(p + 1, totalPages))}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="rotate fill-current stroke-current  hover:text-[#0D6DFD] text-[#041C33] bg-white group-hover:text-[white]"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="currentColor"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  d="M16 5c0 .742.733 1.85 1.475 2.78c.954 1.2 2.094 2.247 3.401 3.046C21.856 11.425 23.044 12 24 12m0 0c-.956 0-2.145.575-3.124 1.174c-1.307.8-2.447 1.847-3.401 3.045C16.733 17.15 16 18.26 16 19m8-7H0"
+                />
+              </svg>
+            </button>
           </div>
         </div>
+
+        {/* Sidebar */}
+        <div className="lg:col-span-1 space-y-8 px-2">
+
+          {/* Search */}
+          <div className="bg-[#F2F2F2] rounded-lg  p-4" data-aos="fade-up" data-aos-duration="1">
+            <div className="flex bg-white  lg:justify-between lg:items-start rounded-full p-2  hover:shadow-md">
+              <input
+                type="text"
+                placeholder="Search Here"
+                className="w-full px-1 py-1   rounded-full focus:outline-none focus:ring-0 focus:ring-[#0d6dfd00]"
+              />
+              <button
+                className="hover:bg-[#182E43] bg-[#0D6DFD] rounded-full text-white px-1 py-1 transition-colors duration-300"
+              >
+                <CiSearch size={22} />
+              </button>
+            </div>
+          </div>
+
+          {/* Categories */}
+          <div className="bg-[#F2F2F2]  p-4 rounded-lg hover:shadow-md" data-aos="fade-up" data-aos-duration="1500">
+            <h2 className="text-xl font-semibold mb-4 text-[#041C33]" >Categories</h2>
+            <ul className="space-y-2 text-sm text-gray-700">
+              {categories.map((cat, i) => (
+                <li key={i} className="hover:text-[#0D6DFD] cursor-pointer flex justify-between">
+                  <span className="heading">{cat.title}</span>
+                  <span className="heading">{cat.cat}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Recent Posts */}
+          <div className="bg-[#F2F2F2] p-4 rounded-lg hover:shadow-md" data-aos="fade-up" data-aos-duration="1000">
+            <h3 className="text-lg font-semibold mb-4 text-[#041C33]">Recent Posts</h3>
+            <ul className="space-y-2 text-sm text-gray-700">
+              {recentPosts.map((post, i) => (
+                <li key={i}>
+                  <img src={post.img} alt="img" className="mb-4 rounded  w-full" />
+                  <span className="text-xs text-gray-500">{post.date}</span>
+                  <p className="font-medium heading mb-4 hover:text-[#0D6DFD] cursor-pointer">{post.title}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Left: Schedule Section */}
+          <section className="bg-[#112B58] relative  text-white lg:text-left md:text-left px-4 text-center rounded-xl shadow-md w-full md:w-[350px]" data-aos="fade-up" data-aos-duration="1500" >
+
+            {/* Background Image */}
+            <div className="absolute inset-0 z-0 opacity-10">
+              <img
+                src="https://meditics.temptics.com/assets/img/service-sidebar-cta-bg.jpg"
+                alt="Background"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <h2 className="text-xl font-semibold pt-8 mb-4">Have Additional Questions?</h2>
+            <ul className="space-y-2  ">
+              <li className='py-2 mt-2 text-sm overflow-hidden '>
+                <hr className='w-75 mx-auto border border-l-0 border-r-0 border-b-0 pt-3 border-t-gray-600' />
+                3rd Avenue, 83 Manhattan, London, UK
+              </li>
+              <li className='hover:text-[#0D6DFD] text-white'>+1890 123 456</li>
+              <li className='hover:text-[#0D6DFD] text-sm'>support@example.com</li>
+              <li className='  pt-4 pb-8 text-sm'>
+
+                {/* Appointment Button */}
+                <motion.button
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.5, delay: 0.8 }}
+                  viewport={{ once: true }}
+                  className="group hidden lg:flex z-10 items-center gap-2 text-[#041C33] text-sm bg-[#DBE9A1] hover:bg-[#041C33] hover:text-[#DBE9A1] px-5 py-3 rounded transition-colors duration-300"
+                >
+                  Contact Us
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="rotate fill-current stroke-current text-[#041C33] group-hover:text-[#DBE9A1] transition-colors duration-300"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      fill="currentColor"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      d="M16 5c0 .742.733 1.85 1.475 2.78c.954 1.2 2.094 2.247 3.401 3.046C21.856 11.425 23.044 12 24 12m0 0c-.956 0-2.145.575-3.124 1.174c-1.307.8-2.447 1.847-3.401 3.045C16.733 17.15 16 18.26 16 19m8-7H0"
+                    />
+                  </svg>
+                </motion.button>
+              </li>
+
+            </ul>
+          </section>
+        </div>
+
+
       </div>
 
       <Footer2 />
