@@ -17,7 +17,7 @@ const Footer = () => {
 
   return (
     <footer className="bg-[#0C243A] text-[#B4BCC2] px-6 py-1 md:px-16 pt-10">
-      <div className="max-w-6xl mx-auto flex lg:flex-row flex-col lg:items-start justify-center items-center gap-8">
+      <div className="max-w-7xl mx-auto flex lg:flex-row flex-col lg:items-start justify-center items-center gap-8">
 
         {/* Branding & Subscription */}
         <div data-aos="fade-up" className="mx-auto lg:text-left text-center">
@@ -55,10 +55,10 @@ const Footer = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: 1 }}
-            className="w-full px-6 py-4 "
+            className="w-full px-6 lg:px-1 lg:py-1 py-4 "
           >
-            <h3 className="text-[#0C243A] font-bold text-lg mb-3">Follow Us</h3>
-            <div className="flex gap-4 text-[#0C243A] text-xl">
+            <h3 className="text-[#0C243A] font-bold text-lg lg:mb-0 mb-3">Follow Us</h3>
+            <div className="flex gap-4 lg:justify-start justify-center items-center text-[#0C243A] text-xl">
               <a href="#" className="border border-gray-600 text-white bg-white/20 hover:bg-[#0D6DFD] hover:border-[#0D6DFD] py-2 px-2 rounded  transition-colors duration-300">
                 <FaFacebookF size={"15px"} />
               </a>
@@ -154,10 +154,9 @@ const Footer = () => {
       </div>
 
       {/* Footer Bottom */}
-      <div className="text-white max-w-6xl mx-auto mt-10 pt-6 flex flex-col md:flex-row justify-between items-center text-sm"
-        style={{ borderTop: '1px dashed #4B5563' }} data-aos="fade-up"
-        data-aos-delay="800"
-      >
+      <div className="text-white max-w-7xl mx-auto mt-10 pt-6 flex flex-col md:flex-row justify-between items-center text-sm"
+        style={{ borderTop: '1px dashed #4B5563' }} >
+
         <p>© <span className="text-[#0D6DFD]">Medtics</span> 2025. All Rights Reserved.</p>
 
         {/* Payment Icons */}
@@ -169,11 +168,11 @@ const Footer = () => {
             'payment-method-4.png',
             'payment-method-5.png',
           ].map((img, i) => (
-            <div key={i} className="p-2 rounded hover:bg-white/20 transition-colors cursor-pointer">
+            <div key={i} className="p-1 rounded hover:bg-white/20 transition-colors cursor-pointer">
               <img
                 src={`https://meditics.temptics.com/assets/img/${img}`}
                 alt={`Payment ${i + 1}`}
-                className="img-fluid"
+                className="w-9 h-6"
               />
             </div>
           ))}
@@ -227,8 +226,8 @@ export const Footer2 = () => {
           className="w-full h-full object-cover"
         />
       </div>
- 
-      <div className="max-w-6xl mx-auto flex lg:flex-row flex-col lg:items-start justify-center items-center gap-8">
+
+      <div className="max-w-7xl mx-auto flex lg:flex-row flex-col lg:items-start justify-center items-center gap-8">
 
         {/* Branding & Subscription */}
         <div data-aos="fade-up" className="mx-auto lg:text-left text-center">
@@ -336,9 +335,7 @@ export const Footer2 = () => {
 
       {/* Footer Bottom */}
       <div className="text-white max-w-6xl mx-auto mt-10 pt-6 flex flex-col md:flex-row justify-between items-center  text-sm"
-        style={{ borderTop: '1px dashed #4B5563' }} data-aos="fade-up"
-        data-aos-delay="800"
-      >
+        style={{ borderTop: '1px dashed #4B5563' }} >
         <p>© <span className="text-[#0D6DFD]">Medtics</span> 2025. All Rights Reserved.</p>
 
 
@@ -349,7 +346,7 @@ export const Footer2 = () => {
           transition={{ duration: 0.4, delay: 1 }}
           className=""
         >
-          <div className="flex justify-center gap-4 lg:mt-0 lg:mb-0 md:mt-0 md:mb-0 mt-5 mb-4 text-[#0C243A] text-xl">
+          <div className="flex justify-center  gap-4 lg:mt-0 lg:mb-0 md:mt-0 md:mb-0 mt-5 mb-4 text-[#0C243A] text-xl">
             <a href="#" className="border border-gray-600 text-white bg-white/20 hover:bg-[#0D6DFD] hover:border-[#0D6DFD] py-2 px-2 rounded  transition-colors duration-300">
               <FaFacebookF size={"15px"} />
             </a>

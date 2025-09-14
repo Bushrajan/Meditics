@@ -1,5 +1,5 @@
 const sharedOffer = [
-    "One-on-one virtual sessions with certified counselors",
+    "One-on-one virtual sessions with certified couns",
     "Stress and anxiety management techniques",
     "Sleep improvement & energy-boosting strategies",
     "Personalized nutrition and wellness plans",

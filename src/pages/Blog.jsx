@@ -157,29 +157,29 @@ const Blog = () => {
         </div>
       </div>
 
-      <div className="max-w-6xl flex flex-wrap justify-center items-center gap-8 mb-15 mt-16 bg-white mx-auto p-3">
-        <div className="max-w-7xl mx-auto px-4 py-10 grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <div className="max-w-6xl flex flex-wrap justify-center items-center gap-8 lg:mb-15 md:mb-10  mb-5 lg:mt-16 md:m-10 mt-5 bg-white mx-auto lg:p-3">
+        <div className="max-w-7xl mx-auto lg:px-4 md:py-10 grid grid-cols-1 lg:grid-cols-3 gap-8">
 
           {/* Blog Posts*/}
-          <div className="lg:col-span-2 space-y-8" data-aos="fade-up" data-aos-duration="1050">
+          <div className="lg:col-span-2 space-y-8 px-2" data-aos="fade-up" data-aos-duration="1050">
             {paginatedPosts.map((post, i) => (
-              <div key={i} className="bg-white rounded-lg hover:shadow-md overflow-hidden">
+              <div key={i} className="bg-white rounded-lg lg:border-0 md:border-0 sm:border-0 border-1 border-[#0D6DFD] hover:shadow-md overflow-hidden">
                 <img src={post.img} alt={post.title} className="w-full object-cover" />
                 <div className="lg:p-6 p-2 space-y-2">
                   {/* Meta Info */}
-                  <div className="text-sm text-gray-500 flex items-center mb-5 gap-4">
-                    <span className="flex gap-1 text-white p-1 px-4 bg-[#0D6DFD] rounded-full">
+                  <div className="lg:text-sm md:text-sm sm:text-sm text-[9px] text-gray-500 flex items-center mb-5 gap-3">
+                    <span className="flex gap-1 items-center text-white p-1 px-4 bg-[#0D6DFD] rounded-full">
                       {/* Author Icon */}
                       <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">
                         <path fill="white" d="M17.25 2.75H6.75A4.75 4.75 0 0 0 2 7.5v9a4.75 4.75 0 0 0 4.75 4.75h10.5A4.76 4.76 0 0 0 22 16.5v-9a4.76 4.76 0 0 0-4.75-4.75m-3.65 8.32a3.26 3.26 0 0 1-3.23 0L3.52 7.14a3.25 3.25 0 0 1 3.23-2.89h10.5a3.26 3.26 0 0 1 3.23 2.89z" stroke-width="0.2" stroke="#040000" />
                       </svg>
                       By {post.author}
                     </span>
-                    <span className="flex gap-1">
+                    <span className="flex gap-1 items-center">
                       <FaRegClock color="#B6B7B9" className="w-[19px] h-[19px]" />
                       {post.readTime}
                     </span>
-                    <span className="flex gap-1">
+                    <span className="flex gap-1 items-center">
                       <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24">
                         <path fill="#B6B7B9" d="M17.25 2.75H6.75A4.75 4.75 0 0 0 2 7.5v9a4.75 4.75 0 0 0 4.75 4.75h10.5A4.76 4.76 0 0 0 22 16.5v-9a4.76 4.76 0 0 0-4.75-4.75m-3.65 8.32a3.26 3.26 0 0 1-3.23 0L3.52 7.14a3.25 3.25 0 0 1 3.23-2.89h10.5a3.26 3.26 0 0 1 3.23 2.89z" stroke-width="0.2" stroke="#040000" />
                       </svg>
@@ -188,10 +188,10 @@ const Blog = () => {
                   </div>
 
                   {/* Title + Excerpt */}
-                  <h2 className="lg:text-3xl text-2xl font-bold text-[#041C33] hover:text-[#0D6DFD] transition">
+                  <h2 className="lg:text-3xl md:text-2xl sm:text-xl font-bold text-[#041C33] hover:text-[#0D6DFD] transition">
                     {post.title}
                   </h2>
-                  <p className="text-gray-500 mt-2 mb-4" style={{ fontSize: "15px" }}>
+                  <p className="text-gray-500 mt-2 mb-4 lg:text-sm md:text-sm sm:text-sm text-[13px]" >
                     {post.text}
                   </p>
 
@@ -201,7 +201,7 @@ const Blog = () => {
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     transition={{ duration: 0.5, delay: 0.1 }}
-                    className="group flex items-center gap-3 text-sm text-[#0D6DFD] border border-[#0D6DFD] hover:bg-[#0D6DFD] hover:text-[white] px-5 py-3 rounded font-semibold transition-colors duration-300"
+                    className="group lg:w-[150px] md:w-[150px] sm:w-[150px] w-full flex items-center gap-3 text-sm text-[#0D6DFD] border border-[#0D6DFD] hover:bg-[#0D6DFD] hover:text-[white] px-5 py-3 rounded font-semibold transition-colors duration-300"
                   >
 
                     <Link to={`/detailblog/${i}`} className="flex  lg:w-25 md:w-50 w-full  btn justify-center items-center gap-2  ">

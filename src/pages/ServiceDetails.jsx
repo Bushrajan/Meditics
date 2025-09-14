@@ -125,8 +125,8 @@ const ServicesDetails = () => {
 
 
 
-      <div className="max-w-6xl flex flex-wrap justify-center items-center gap-8 mb-15 mt-16 bg-white mx-auto p-3">
-        <div className="max-w-7xl mx-auto px-4 py-10 grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <div className="max-w-6xl flex flex-wrap justify-center items-center gap-8 lg:mb-15 lg:mt-16 md:mb-15 md:mt-16 mb-10 mt-10 bg-white mx-auto lg:p-3 md:p-3 p-1">
+        <div className="max-w-7xl mx-auto lg:px-4 md:px-4 lg:py-10 md:py-10 py-1 grid grid-cols-1 lg:grid-cols-3 gap-8">
 
           {/* Blog Posts*/}
           <div className="lg:col-span-2 space-y-8" data-aos="fade-up" data-aos-duration="1050">
@@ -151,20 +151,16 @@ const ServicesDetails = () => {
               <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-10">
                 {/* <!-- Left Content --> */}
                 <div className="lg:w-1/2  lg:text-left md:text-center text-center space-y-6" >
-
                   <h2 className="text-2xl font-bold leading-snug" data-aos="fade-up" data-aos-duration="1650">What We Offer:</h2>
-
                   <ul className=" space-y-2 text-sm  list-disc list-inside" data-aos="fade-up" data-aos-duration="1800">
-
-                    {
-                      offer.map((item, i) => (
-                        <li key={i} className='flex  lg:justify-start md:items-center  md:justify-center justify-start items-start  md:p-1'>
-                          <span className='bg-[#0D6DFD] rounded-full p-1'>
-                            <img src="/rightarrow.png" className='w-3 h-4' alt="angle" />
-                          </span>&nbsp; {item}
-                        </li>
-                      ))
-                    }
+                    {offer.map((item, i) => (
+                      <li key={i} className='flex  lg:justify-start md:items-center  md:justify-center justify-center items-center  md:p-1'>
+                        <span className='bg-[#0D6DFD] rounded-full p-1'>
+                          <img src="/rightarrow.png" className='w-2 h-3' alt="angle" />
+                        </span>
+                        <span className="lg:text-sm md:text-sm sm:text-sm text-[12px]">&nbsp; {item}</span>
+                      </li>
+                    ))}
                   </ul>
                 </div>
 
@@ -185,10 +181,14 @@ const ServicesDetails = () => {
                   <h2 className="text-2xl font-bold leading-snug" data-aos="fade-up" data-aos-duration="1650">Key Features:</h2>
                   {
                     features.map((item, i) => (
-                      <li key={i} className='flex  lg:justify-start md:items-center  md:justify-center justify-start items-start  md:p-1'>
-                        <span className='bg-[#0D6DFD] rounded-full p-1'>
-                          <img src="/rightarrow.png" className='w-3 h-4' alt="angle" />
-                        </span>&nbsp;{item.title} :<small style={{ fontSize: "12px" }} >&nbsp;&nbsp;{item.detail}</small>
+                      <li key={i} className='flex lg:flex-row flex-col lg:justify-start md:items-center  md:justify-start justify-center items-center  md:p-1'>
+                        <span className='flex '>
+                          <span className=' bg-[#0D6DFD] rounded-full p-1'>
+                            <img src="/rightarrow.png" className='w-2 h-3' alt="angle" />
+                          </span>
+                          <span>&nbsp;{item.title} :</span>
+                        </span>
+                        <small style={{ fontSize: "13px" }} >&nbsp;&nbsp;{item.detail}</small>
                       </li>
                     ))
                   }
@@ -201,17 +201,17 @@ const ServicesDetails = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 className="space-y-2 mt-8 mb-5">
-                <h2 className="text-2xl font-bold text-[#041C33]">Why It Matters:</h2>
-                <ul className=" text-sm list-none list-inside">
+                <h2 className="text-2xl font-bold lg:text-left  text-center text-[#041C33]">Why It Matters:</h2>
+                <ul className=" text-sm  lg:text-left  text-center list-none list-inside">
                   {why.map((item, i) => (
                     <li key={i} >
-                      <small>{item}</small>
+                      {item}
                     </li>
                   ))}
                 </ul>
               </motion.div>
 
-              <section className=" py-1">
+              <section className="px-2 py-1">
 
                 {faqs.map((faq, i) => (
                   <div key={i} className="px-2 rounded-xl mb-4 bg-[#F2F2F2] py-4">

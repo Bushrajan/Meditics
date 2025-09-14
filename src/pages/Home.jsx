@@ -89,7 +89,7 @@ const Home = () => {
 
                 <button className='text-[#DBE9A1] lg:mx-0 mx-auto border border-[#DBE9A1] flex items-center gap-2  px-4 py-1  rounded-full font-semibold transition-colors duration-300" '> <BiSolidHeart color='#DBE9A1' /> HI I AM</button>
 
-                <h1 className='heading-h1 lg:text-6xl md:text-4xl text-4xl'>
+                <h1 className='heading-h1 lg:text-6xl md:text-4xl text-3xl mt-2'>
                   Meet Dr. Tushar Raja
                   <br />— Your Trusted <br />
                   Healthcare Partner
@@ -201,8 +201,10 @@ const Home = () => {
                 </span>
 
 
-                {/* slider */}
+                {/* Right side */}
                 <div className='relative ' data-aos="fade-up" data-aos-duration="1500" >
+
+                  {/* slider */}
                   <div className="absolute rounded-xl z-10 lg:top-[0px] w-[310px] h-[200px] lg:-mr-60 md:-mr-35  right-[0px] bottom-0 " >
                     <Swiper
                       modules={[Autoplay]}
@@ -255,24 +257,20 @@ const Home = () => {
 
 
                   {/* backper */}
-                  <div className='absolute md:top-[135px] top-[130px] md:mt-0 mt-5 left-0 z-0  w-[450px] items-center  h-[550px]  '>
+                  <div className='absolute md:top-[135px] sm:top-[130px] top-[150px] md:mt-0 left-[15px] mt-5 lg:left-0 md:left-0 sm:left-0 z-0  md:w-[450px] items-center  md:h-[550px]  '>
                     {/* Background image */}
 
                     <span className="">
-                      <img src="https://meditics.temptics.com/assets/img/banner-vector-2.svg" alt="img" className='lg:w-[450px] md:h-[500px] h-[500px]  ' />
-                    </span>
-
-                    <span className="pulse-ring">
-                      <img
-                        src="https://meditics.temptics.com/assets/img/banner-vector-2.svg" alt="img" className='lg:w-[450px] md:h-[500px] h-[500px] ' />
+                      <img src="https://meditics.temptics.com/assets/img/banner-vector-2.svg" alt="img" className='lg:w-[450px]  sm:w-[590px] w-[320px] sm:h-[400px] md:h-[500px] h-[300px]  ' />
                     </span>
                     <span className="pulse-ring">
-                      <img
-                        src="https://meditics.temptics.com/assets/img/banner-vector-2.svg" alt="img" className='lg:w-[450px] md:h-[500px] h-[500px] ' />
+                      <img src="https://meditics.temptics.com/assets/img/banner-vector-2.svg" alt="img" className='lg:w-[450px]  sm:w-[590px] w-[320px] sm:h-[400px] md:h-[500px] h-[300px] ' />
                     </span>
                     <span className="pulse-ring">
-                      <img
-                        src="https://meditics.temptics.com/assets/img/banner-vector-2.svg" alt="img" className='lg:w-[450px] md:h-[500px] h-[500px] ' />
+                      <img src="https://meditics.temptics.com/assets/img/banner-vector-2.svg" alt="img" className='lg:w-[450px]  sm:w-[590px] w-[320px] sm:h-[400px] md:h-[500px] h-[300px] ' />
+                    </span>
+                    <span className="pulse-ring">
+                      <img src="https://meditics.temptics.com/assets/img/banner-vector-2.svg" alt="img" className='lg:w-[450px]  sm:w-[590px] w-[320px] sm:h-[400px] md:h-[500px] h-[300px] ' />
                     </span>
                   </div>
 

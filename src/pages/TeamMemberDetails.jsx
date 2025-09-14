@@ -79,7 +79,7 @@ const TeamMemberDetails = () => {
 
       {/* Doctor Info */}
       <div className="max-w-5xl md:mt-15 p-3 mx-auto">
-        <div className="bg-white rounded-xl p-6 md:flex justify-center md:items-center gap-6 max-w-5xl mx-auto my-10">
+        <div className="bg-white rounded-xl lg:p-6 md:p-6 md:flex justify-center md:items-center gap-6 max-w-5xl mx-auto lg:my-10 md:my-10 my-5">
           {/* Doctor Image */}
           <div className="md:px-10 px-2 mx-auto justify-center items-center flex-shrink-0 mb-6 md:mb-0">
             <img
@@ -157,18 +157,18 @@ const TeamMemberDetails = () => {
 
 
       {/* Left Paragraph */}
-      < div className="max-w-5xl lg:px-5 p-3  border-t border-gray-200 pt-10 mx-auto" >
+      < div className="max-w-5xl lg:px-5 p-3  lg:text-left text-center border-t border-gray-200 pt-10 mx-auto" >
         <h2 className="text-3xl font-bold text-[#041C33]">Introducing the Doctor:</h2>
         <p className="text-gray-600 text-sm leading-relaxed">
           One of the most significant individuals in our society is the doctor. They can save lives. When someone is having trouble, they are the first to offer assistance. Many parents hope that their kids will grow up to be doctors. The people who know the most about all illnesses are doctors. Sample paragraphs about doctors and their value to society may be found in this article. Before you write a paragraph on doctors, have a look at them. In society, doctors are regarded as the most significant and accountable individuals. When someone is experiencing health issues, they are the ones who provide assistance. The only people who truly understand all types of diseases, their symptoms, and their remedies are doctors. They tirelessly toil day and night for  </p>
       </div >
 
 
-      <div className="max-w-5xl mx-auto  p-3 grid grid-cols-1 md:grid-cols-2 gap-10 px-6 py-16 "
+      <div className="max-w-5xl mx-auto  p-3 grid grid-cols-1 md:grid-cols-2 gap-10 lg:px-6 md:px-2 md:py-16 py-5"
         id="experience"
       >
         {/* Left Paragraph */}
-        <div className="space-y-4">
+        <div className="space-y-4 lg:text-left text-center">
           <h2 className="text-3xl font-bold text-[#041C33]">Personal Experience</h2>
           <p className="text-gray-600 text-sm leading-relaxed">
             Bring win-win survival techniques to the table. Victory to guarantee that a new normal that has developed from generation X is on the streamlined solution with proactive other dominance moving forward.
@@ -178,7 +178,7 @@ const TeamMemberDetails = () => {
         {/* Right Counters */}
 
         <motion.div
-          className="grid grid-cols-1 sm:grid-cols-3 gap-6 justify-items-center"
+          className="flex lg:flex-row flex-wrap gap-6 mx-auto justify-center items-center"
           whileInView={() => setStartCount(true)}
           viewport={{ once: true }}
         >
@@ -334,7 +334,6 @@ const TeamMemberDetails = () => {
 
         </section >
       </div>
-
 
       <Footer2 />
     </div >
