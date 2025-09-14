@@ -101,7 +101,7 @@ const About = () => {
                 </div>
 
                 {/* <!-- Front Image --> */}
-                <div className=" w-full lg:h-[550px] md:h-[550px] rounded-circle bg-custom-blue border-circle2 relative" data-aos="fade-up" data-aos-duration="1500">
+                <div className=" w-full lg:h-[550px] md:h-[550px] rounded-circle border-circle2 relative" data-aos="fade-up" data-aos-duration="1500">
                   <img src="https://meditics.temptics.com/assets/img/about-2-img-1.jpg" alt="About" className="w-full h-full object-cover rounded-xl custom-radius sm:custom-radius-sm  border-r-5 border-[#DBE9A1]" />
                 </div>
               </div>
