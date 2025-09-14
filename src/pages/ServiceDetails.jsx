@@ -41,7 +41,7 @@ const ServicesDetails = () => {
   // detailservice falllback
   const fallback = {
     title: "General Health Service",
-    img: "https://meditics.temptics.com/assets/img/team-details-img.jpg",
+    img: "https://meditics.temptics.com/assets/img/service-2.jpg",
     para: "This is a general fallback service description. Our team is committed to providing expert care and personalized attention to every patient.",
     offer: [
       "Comprehensive health checkups",
